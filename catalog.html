@@ -54,8 +54,9 @@
         <form action="https://echo.htmlacademy.ru/" method="get">
           <fieldset>
             <legend>Цена:</legend>
-            <label><input type="range" min="0" max="30000" step="100" value="100"></label>
-            <label><input type="text" name="min-value" value="0"></label><label><input type="text" name="max-value" value="30000"></label>
+            <label class="visually-hidden" for="price-range">Диапазон цен</label>
+            <input id="price-range" type="range" min="0" max="30000" step="1000">
+            <label class="visually-hidden" for="min-price">Минимальная цена</label><input id="min-price" type="number" name="min-value" value="0"><label class="visually-hidden" for="max-price">Максимальная цена</label><input id="max-price" type="number" name="max-value" value="30000">
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -111,9 +112,13 @@
           <li>
             <a href="">По функционалу</a>
           </li>
+          <li>
+            <a href=""><!--Иконка--><span class="visually-hidden">От дорогих к дешевым</span></a>
+          </li>
+          <li>
+            <a href=""><!--Иконка--><span class="visually-hidden">От дешевых к дорогим</span></a>
+          </li>
         </ul>
-        <span><!--up--></span>
-        <span><!--down--></span>
       </section>
 
       <section>
@@ -193,13 +198,6 @@
         </ul>
       </section>
 
-      <section>
-        <!--Иконка--><h2>Товар добавлен в корзину!</h2>
-        <a href="">Оформить заказ</a>
-        <a href="catalog.html">Продолжить покупки</a>
-        <button type="button">Закрыть</button>
-      </section>
-
       <ul>
         <li>
           <a href="">1</a>
@@ -249,14 +247,21 @@
         <h2 class="visually-hidden">Следите за нашими новостями</h2>
         <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <ul>
-          <li><a href="https://vk.com/">Вконтакте</a></li>
-          <li><a href="https://www.facebook.com/">Фейсбук</a></li>
-          <li><a href="https://www.instagram.com/">Инстаграм</a></li>
+          <li><a href="https://vk.com/"><!--Иконка--><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href="https://www.facebook.com/"><!--Иконка--><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a href="https://www.instagram.com/"><!--Иконка--><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
         <p>Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p>Разработано —<a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
       </section>
     </footer>
+
+    <section>
+      <!--Иконка--><h2>Товар добавлен в корзину!</h2>
+      <a href="">Оформить заказ</a>
+      <a href="catalog.html">Продолжить покупки</a>
+      <button type="button">Закрыть</button>
+    </section>
 
   </body>
 </html>

@@ -41,6 +41,7 @@
 
     <main>
       <h1 class="visually-hidden">Интернет-магазин строительных материалов</h1>
+
       <section>
         <h2 class="visually-hidden">Предложения магазина</h2>
         <ul>
@@ -241,32 +242,6 @@
         <a href="">Заблудились? Напишите нам!</a>
       </section>
 
-      <section>
-        <h2 class="visually-hidden">Интерактивная карта</h2>
-        <!--Тут будет карта-->
-        <button type="button">Закрыть<!--иконка--></button>
-      </section>
-
-      <section>
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <form action="https://echo.htmlacademy.ru/" method="post">
-          <p>
-            <label for="feedback-name">Ваше имя:</label>
-            <input id="feedback-name" type="text" name="feedback-name" placeholder="Имя Фамилия" required>
-          </p>
-          <p>
-            <label for="feedback-email">Ваш e-mail:</label>
-            <input id="feedback-email" type="email" name="feedback-email" placeholder="email@example.com" required>
-          </p>
-          <p>
-            <label for="feedback-area">Текст письма:</label>
-            <textarea id="feedback-area" name="feedback-text" placeholder="В свободной форме"></textarea>
-          </p>
-          <button type="submit">Отправить</button>
-        </form>
-        <button type="button">Закрыть<!--иконка--></button>
-      </section>
-
     </main>
 
     <footer>
@@ -295,14 +270,40 @@
         <h2 class="visually-hidden">Следите за нашими новостями</h2>
         <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <ul>
-          <li><a href="https://vk.com/">Вконтакте</a></li>
-          <li><a href="https://www.facebook.com/">Фейсбук</a></li>
-          <li><a href="https://www.instagram.com/">Инстаграм</a></li>
+          <li><a href="https://vk.com/"><!--Иконка--><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href="https://www.facebook.com/"><!--Иконка--><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a href="https://www.instagram.com/"><!--Иконка--><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
         <p>Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p>Разработано —<a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
       </section>
     </footer>
+
+    <section>
+      <h2 class="visually-hidden">Интерактивная карта</h2>
+      <!--Тут будет карта-->
+      <button type="button">Закрыть<!--иконка--></button>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <p>
+          <label for="feedback-name">Ваше имя:</label>
+          <input id="feedback-name" type="text" name="feedback-name" placeholder="Имя Фамилия" required>
+        </p>
+        <p>
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input id="feedback-email" type="email" name="feedback-email" placeholder="email@example.com" required>
+        </p>
+        <p>
+          <label for="feedback-area">Текст письма:</label>
+          <textarea id="feedback-area" name="feedback-text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть<!--иконка--></button>
+    </section>
 
   </body>
 </html>
