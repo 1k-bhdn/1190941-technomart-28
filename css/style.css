@@ -157,6 +157,7 @@ input[type="search"] {
 }
 
 .title {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -426,7 +427,7 @@ input[type="search"] {
 }
 
 .index-service__text {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 }
 
@@ -586,15 +587,22 @@ input[type="search"] {
   box-sizing: border-box;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .card__img,
+.card:focus .card__img {
+  display: none;
 }
 
 .card__purchase {
   display: none;
 }
 
-.catalog-grid__item:nth-of-type(3) .card__purchase {
+.card:hover .card__purchase,
+.card:focus .card__purchase {
   display: block;
 }
 
