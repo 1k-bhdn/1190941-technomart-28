@@ -103,14 +103,15 @@
         <h2 class="catalog__heading">Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru/" method="get">
 
-          <fieldset>
-            <legend>Цена:</legend>
-            <label class="visually-hidden" for="price-range">Диапазон цен</label>
-            <input id="price-range" type="range" min="0" max="30000" step="1000">
+          <fieldset class="catalog-filter__price filter-fieldset">
+            <legend class="catalog-filter__title">Цена:</legend>
+            <div class="catalog-filter__toggle" aria-label="Диапазон цен">
+              <!--Будет тогл, позже-->
+            </div>
             <label class="visually-hidden" for="min-price">Минимальная цена</label>
-            <input id="min-price" type="number" name="min-value" value="0">
+            <input class="catalog-filter__number" id="min-price" type="number" name="min-value" value="0">
             <label class="visually-hidden" for="max-price">Максимальная цена</label>
-            <input id="max-price" type="number" name="max-value" value="30000">
+            <input class="catalog-filter__number" id="max-price" type="number" name="max-value" value="30000">
           </fieldset>
 
           <fieldset class="catalog-filter__manufacturer filter-fieldset">
@@ -157,23 +158,27 @@
         </form>
       </section>
 
-      <section>
+      <section class="catalog__sort catalog-sort">
         <h2 class="catalog__heading">Сортировка:</h2>
-        <ul>
-          <li>
-            <a href="">По цене</a>
+        <ul class="catalog-sort__list list">
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link catalog-sort__link--active" href="">По цене</a>
           </li>
-          <li>
-            <a href="">По типу</a>
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link" href="">По типу</a>
           </li>
-          <li>
-            <a href="">По функционалу</a>
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link" href="">По функционалу</a>
           </li>
-          <li>
-            <a href=""><!--Иконка--><span class="visually-hidden">От дорогих к дешевым</span></a>
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link" href=""><!--Иконка-->
+              <span class="visually-hidden">От дорогих к дешевым</span>
+            </a>
           </li>
-          <li>
-            <a href=""><!--Иконка--><span class="visually-hidden">От дешевых к дорогим</span></a>
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link" href=""><!--Иконка-->
+              <span class="visually-hidden">От дешевых к дорогим</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -207,6 +212,7 @@
           </li>
           <li class="catalog-grid__item">
             <article class="catalog-grid__card card">
+              <!--Не забыть снять ВХ-->
               <img class="card__img visually-hidden" src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000" title="Перфоратор BOSCH BFG 6000">
               <div class="card__purchase">
                 <a class="card__buy link button link button" href="">Купить</a>
@@ -290,24 +296,24 @@
         </ul>
       </section>
 
-      <ul>
-        <li>
-          <a href="">1</a>
+      <ul class="catalog__pagination catalog-pagination list">
+        <li class="catalog-pagination__item">
+          <a class="catalog-pagination__link catalog-pagination__link--current" href="">1</a>
         </li>
-        <li>
-          <a href="">2</a>
+        <li class="catalog-pagination__item">
+          <a class="catalog-pagination__link" href="">2</a>
         </li>
-        <li>
-          <a href="">3</a>
+        <li class="catalog-pagination__item">
+          <a class="catalog-pagination__link" href="">3</a>
         </li>
-        <li>
-          <a href="">Следующая</a>
+        <li class="catalog-pagination__item">
+          <a class="catalog-pagination__link" href="">Следующая</a>
         </li>
       </ul>
 
-      <section>
-        <h2>Пара слов о перфораторах</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+      <section class="catalog__about catalog-about">
+        <h2 class="catalog-about__title title">Пара слов о перфораторах</h2>
+        <p class="catalog-about__text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </section>

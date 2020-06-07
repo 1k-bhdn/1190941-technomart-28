@@ -4,6 +4,7 @@
   --black: #000000;
   --deep-blue: #293449;
   --dark-green: #518534;
+
   --basic-red: #ee3643;
   --basic-green: #63a63e;
   --basic-blue: #32425c;
@@ -13,7 +14,7 @@
   --white: #ffffff;
 
   --special-deepblue: #161D29;
-  --special-yellow: #FFBF47;
+  --special-yellow: #ffbf47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
   --special-green: #367315;
@@ -21,6 +22,12 @@
   --special-yellowlight: #FFD180;
   --special-light: #eaeaea;
   --special-graylight: #e5e5e5;
+  --special-red: #FF5357;
+  --special-transparent: rgba(0, 0, 0, 0.3);
+
+  --transparent-bg: rgba(255, 255, 255, 0.3);
+  --transparent-graylight: rgba(197, 197, 197, 0.3);
+  --transparent-gray: rgba(169, 169, 169, 0.3);
 
   --del: #A9A9A9;
   --logo-shadow: rgba(0, 0, 0, 0.24);
@@ -103,7 +110,7 @@
 body {
   min-width: 960px;
   padding: 0;
-  font-family: "Cuprum", "Open Sans", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 24px;
@@ -123,6 +130,11 @@ img {
 input[name="slider-controls"],
 input[name="service-tabs"] {
   display: none;
+}
+
+input[type="number"],
+input[type="search"] {
+  border: none;
 }
 
 /* Global mixes */
@@ -159,17 +171,20 @@ input[name="service-tabs"] {
 }
 
 .link {
-  tab-index: 0;
   color: var(--white);
   text-decoration: none;
 }
 
 .button {
-  tab-index: 0;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   background-color: var(--basic-red);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--special-red);
 }
 
 .button:active {
@@ -210,7 +225,6 @@ input[name="service-tabs"] {
 
 .header-search__form {
   background-color: transparent;
-  border: none;
 }
 
 .header-search__form::placeholder {
@@ -321,7 +335,127 @@ input[name="service-tabs"] {
 
 /* Main */
 
-/* Main index */
+/* Main index__offer */
+
+.index-offer__item:nth-child(1),
+.index-offer__item:nth-child(6) {
+  background-color: var(--special-yellow);
+}
+
+.index-offer__item:nth-child(2) {
+  background-color: var(--special-blue);
+}
+
+.index-offer__item:nth-child(3) {
+  background-color: var(--special-lilac);
+}
+
+.index-offer__item:nth-child(5) {
+  background-color: var(--special-greenlight);
+}
+
+.index-offer__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+.index-offer__link {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--transparent-bg);
+}
+
+.index-offer__link:hover,
+.index-offer__link:focus {
+  background-color: var(--transparent-graylight);
+}
+
+.index-offer__link:active {
+  background-color: var(--transparent-gray);
+}
+
+.slider__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: black; /*временно*/
+}
+
+.slider__text {
+  color: var(--white);
+  background-color: black; /*временно*/
+}
+
+/* Main index__product */
+
+.index__row {
+  background-color: var(--basic-yellowlight);
+}
+
+/* Main index__manufacturer */
+
+.index-manufacturer__link {
+  display: block;
+  border: 1px solid var(--special-light);
+}
+
+.index-manufacturer__link:hover,
+.index-manufacturer__link:focus {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.index-manufacturer__link:active {
+  opacity: 0.5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Main index__service */
+
+.index-service {
+  background-color: var(--basic-bg);
+}
+
+.index-service > .index-service__title {
+  color: var(--black);
+}
+
+.index-service__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.index-service__label {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--white);
+  background-color: var(--basic-blue);
+  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+}
+
+.index-service__label:hover:not(.index-service__label--active),
+.index-service__label:focus:not(.index-service__label--active) {
+  background-color: var(--deep-blue);
+}
+
+.index-service__label--active {
+  color: var(--basic-blue);
+  background-color: var(--white);
+  box-shadow: 0 1px 0 var(--white), inset 0 1px 0 var(--white);
+}
+
+.index-service__link {
+  background-color: var(--special-red);
+  border-radius: 1px;
+}
+
+/* Main index__about */
 
 .index-about {
   background-color: var(--white);
@@ -348,10 +482,15 @@ input[name="service-tabs"] {
   border: none;
 }
 
-/* Main catalog */
+/* Catalog */
+
+.catalog {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+/* Catalog breadcrumbs */
 
 .catalog-breadcrumbs__link {
-  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -364,7 +503,6 @@ input[name="service-tabs"] {
 }
 
 .catalog__heading {
-  font-family: "PT Sans", sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -372,8 +510,15 @@ input[name="service-tabs"] {
   background-color: var(--basic-yellowlight);
 }
 
+/* Catalog filter */
+
+.catalog-filter__number {
+  font-size: 17px;
+  line-height: 18px;
+  background-color: var(--basic-yellowlight);
+}
+
 .catalog-filter__title {
-  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -381,14 +526,12 @@ input[name="service-tabs"] {
 }
 
 .catalog-filter__label {
-  font-family: "PT Sans", sans-serif;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
 }
 
 .catalog-filter__submit {
-  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -397,10 +540,38 @@ input[name="service-tabs"] {
   border: 1px solid var(--special-graylight);
 }
 
+/* Catalog sort */
+
+.catalog-sort {
+  background-color: var(--basic-yellowlight);
+}
+
+.catalog-sort__link {
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--special-transparent);
+  border-bottom: 1px dotted var(--basic-red);
+}
+
+.catalog-sort__link:hover,
+.catalog-sort__link:focus {
+  color: var(--black);
+  border-bottom-style: solid;
+}
+
+.catalog-sort__link:active,
+.catalog-sort__link--active,
+.catalog-sort__link--active:hover,
+.catalog-sort__link--active:focus {
+  color: var(--basic-red);
+  border: none;
+}
+
 /* Card mixes */
 
 .card-price {
-  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -409,6 +580,7 @@ input[name="service-tabs"] {
 /* Card */
 
 .card {
+  font-family: "PT Sans", "Arial", sans-serif;
   background: var(--white);
   border: 1px solid var(--special-light);
   box-sizing: border-box;
@@ -418,8 +590,12 @@ input[name="service-tabs"] {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.catalog-grid__item:not(:nth-of-type(3)) .card__purchase {
+.card__purchase {
   display: none;
+}
+
+.catalog-grid__item:nth-of-type(3) .card__purchase {
+  display: block;
 }
 
 .card__buy {
@@ -447,6 +623,7 @@ input[name="service-tabs"] {
 .card__to-bookmarks:hover,
 .card__to-bookmarks:focus {
   border-color: var(--basic-blue);
+  background-color: transparent;
 }
 
 .card__to-bookmarks:active {
@@ -455,7 +632,6 @@ input[name="service-tabs"] {
 }
 
 .card__title {
-  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -468,6 +644,47 @@ input[name="service-tabs"] {
 .card__final-price {
   color: var(--white);
   background-color: var(--basic-red);
+}
+
+/* Catalog pagination */
+
+.catalog-pagination__link {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  border: 1px solid var(--special-graylight);
+  border-radius: 2px;
+}
+
+.catalog-pagination__link:hover,
+.catalog-pagination__link:focus {
+  border-color: var(--basic-graylight);
+}
+
+.catalog-pagination__link:active {
+  border-color: var(--basic-red);
+}
+
+.catalog-pagination__link--current {
+  color: var(--white);
+  background-color: var(--basic-red);
+  border: none;
+}
+
+/* Catalog about */
+
+.catalog-about {
+  background-color: var(--basic-bg);
+}
+
+.catalog-about__title {
+  color: var(--black);
+}
+
+.catalog-about__text {
+  font-size: 13px;
 }
 
 /* Footer mixes */
@@ -483,7 +700,7 @@ input[name="service-tabs"] {
 }
 
 .footer-link:active {
-  color: var(--click);
+  opacity: 0.5;
   text-decoration: none;
 }
 
