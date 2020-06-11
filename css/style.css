@@ -155,7 +155,7 @@ input[type="search"] {
 }
 
 .wrapper {
-  width: 940px;
+  width: 960px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -241,7 +241,7 @@ input[type="search"] {
   flex-wrap: wrap;
 
   display: flex;
-  max-width: 940px;
+  max-width: 960px;
 }
 
 .header-logo {
@@ -508,23 +508,73 @@ input[type="search"] {
 
 /* Main */
 
+.index {
+  padding-top: 60px;
+}
+
 /* Main index__offer */
 
-.index-offer__item:nth-child(1),
-.index-offer__item:nth-child(6) {
+.index .index-offer {
+  margin-bottom: 60px;
+}
+
+.index-offer__list {
+  grid-template-rows: 123px 123px 123px;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-areas:
+    "materials tools technique"
+    "slider slider sale"
+    "slider slider delivery";
+
+  display: grid;
+  gap: 20px;
+}
+
+.index-offer__item:not(:nth-child(4)) {
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  display: flex;
+  padding: 20px;
+}
+
+.index-offer__item:nth-child(1) {
+  grid-area: materials;
+
   background-color: var(--special-yellow);
 }
 
 .index-offer__item:nth-child(2) {
+  grid-area: tools;
+
   background-color: var(--special-blue);
 }
 
 .index-offer__item:nth-child(3) {
+  grid-area: technique;
+
   background-color: var(--special-lilac);
 }
 
+.index-offer__item:nth-child(4) {
+  grid-area: slider;
+}
+
 .index-offer__item:nth-child(5) {
+  grid-area: sale;
+
   background-color: var(--special-greenlight);
+}
+
+.index-offer__item:nth-child(6) {
+  grid-area: delivery;
+
+  background-color: var(--special-yellow);
+}
+
+.index-offer .index-offer__title {
+  margin: 0;
 }
 
 .index-offer__title {
@@ -536,9 +586,15 @@ input[type="search"] {
 }
 
 .index-offer__link {
+  max-width: 135px;
+  min-height: 38px;
+  width: 100%;
+  padding: 11px 0;
+
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
 
   color: var(--white);
   background-color: var(--transparent-bg);
@@ -572,6 +628,15 @@ input[type="search"] {
 
 .index__row {
   background-color: var(--basic-yellowlight);
+}
+
+.index-product__list {
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  display: flex;
+
+
 }
 
 /* Main index__manufacturer */
@@ -715,6 +780,24 @@ input[type="search"] {
   margin-bottom: 25px;
 }
 
+/* Catalog mixes */
+
+.catalog .catalog-heading {
+  margin: 0;
+}
+
+.catalog-heading {
+  padding-left: 8px;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: var(--basic-yellowlight);
+  border-radius: 3px;
+}
+
 /* Catalog */
 
 .catalog {
@@ -775,26 +858,14 @@ input[type="search"] {
   background-color: var(--basic-bg);
 }
 
-.catalog .catalog__heading {
-  margin: 0;
-}
-
 .catalog__heading {
   padding: 10px 0 10px 18px;
-
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  background-color: var(--basic-yellowlight);
-  border-radius: 3px;
 }
 
 /* Catalog filter mixes */
 
 .filter-fieldset {
-  padding: 18px 0;
+  padding: 20px 0;
 
   border: none;
 }
@@ -827,6 +898,10 @@ input[type="search"] {
   display: flex;
 }
 
+.catalog-filter__form .catalog-filter__title {
+  margin: -5px 0;
+}
+
 .catalog-filter__title {
   padding-top: 15px;
 
@@ -847,7 +922,9 @@ input[type="search"] {
 }
 
 .catalog-filter__submit {
-  padding: 10px 80px;
+  max-width: 220px;
+  min-height: 38px;
+  padding: 10px 0;
 
   font-size: 13px;
   line-height: 18px;
@@ -861,10 +938,32 @@ input[type="search"] {
 
 /* Catalog filter price */
 
+.catalog-filter__price .catalog-filter__toggle {
+  margin-bottom: 10px;
+}
+
+.catalog-filter__toggle {
+  width: 100%;
+  min-height: 80px;
+
+  border-radius: 3px;
+  background-color: var(--basic-yellowlight);
+}
+
+.catalog-filter__price .catalog-filter__number:last-child {
+  float: right;
+}
+
 .catalog-filter__number {
+  max-width: 95px;
+  min-height: 38px;
+  padding: 10px 0 10px 16px;
+
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
 
+  border-radius: 3px;
   background-color: var(--basic-yellowlight);
 }
 
@@ -875,17 +974,23 @@ input[type="search"] {
   justify-content: space-between;
 
   display: flex;
+  padding: 10px;
 
+  border-radius: 3px;
   background-color: var(--basic-yellowlight);
 }
 
 .catalog-sort__list {
   justify-content: space-between;
+  flex-wrap: wrap;
 
   display: flex;
+  width: 450px;
 }
 
 .catalog-sort__link {
+  display: block;
+
   font-size: 13px;
   line-height: 17px;
   text-transform: uppercase;
@@ -910,6 +1015,10 @@ input[type="search"] {
 }
 
 /* Catalog grid */
+
+.catalog .catalog__grid {
+  margin-bottom: 25px;
+}
 
 .catalog-grid {
   grid-area: catalog;
@@ -941,7 +1050,7 @@ input[type="search"] {
   align-items: center;
 
   display: flex;
-  min-width: 220px;
+  max-width: 220px;
   min-height: 318px;
   padding: 20px;
 

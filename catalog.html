@@ -103,7 +103,7 @@
         <h1 class="catalog__title title">Перфораторы</h1>
 
         <section class="catalog__filter catalog-filter">
-          <h2 class="catalog__heading">Фильтр:</h2>
+          <h2 class="catalog__heading catalog-heading">Фильтр:</h2>
           <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="get">
 
             <fieldset class="catalog-filter__price filter-fieldset">
@@ -112,9 +112,9 @@
                 <!--Будет тогл, позже-->
               </div>
               <label class="visually-hidden" for="min-price">Минимальная цена</label>
-              <input class="catalog-filter__number" id="min-price" type="number" name="min-value" value="0">
+              <input class="catalog-filter__number" id="min-price" type="number" name="min-value" value="0" step="100">
               <label class="visually-hidden" for="max-price">Максимальная цена</label>
-              <input class="catalog-filter__number" id="max-price" type="number" name="max-value" value="30000">
+              <input class="catalog-filter__number" id="max-price" type="number" name="max-value" value="30000" step="100">
             </fieldset>
 
             <fieldset class="catalog-filter__manufacturer filter-fieldset">
@@ -162,7 +162,7 @@
         </section>
 
         <section class="catalog__sort catalog-sort">
-          <h2 class="catalog__heading">Сортировка:</h2>
+          <h2 class="catalog-sort__heading catalog-heading">Сортировка:</h2>
           <ul class="catalog-sort__list list">
             <li class="catalog-sort__item">
               <a class="catalog-sort__link catalog-sort__link--active" href="">По цене</a>
