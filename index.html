@@ -102,9 +102,9 @@
             <ul class="slider list">
               <li class="slider__slide">
                 <img class="slider__img" src="img/main-slide-1.jpg" width="620" height="266" alt="Фото строителя с перфоратором" title="Каталог перфораторов">
-                <h3 class="slider__title visually-hidden">Перфораторы</h3>
-                <p class="slider__text visually-hidden">Настоящие мужские игрушки</p>
-                <a class="slider__link link button visually-hidden" href="catalog.html">Открыть каталог</a>
+                <h3 class="slider__title">Перфораторы</h3>
+                <p class="slider__text">Настоящие мужские игрушки</p>
+                <a class="slider__link link button" href="catalog.html">Открыть каталог</a>
               </li>
               <li class="slider__slide visually-hidden">
                 <img class="slider__img" src="img/main-slide-2.jpg" width="620" height="266" alt="Фото строителя с дрелью" title="Каталог дрелей">
@@ -266,40 +266,44 @@
 
       <section class="index__service index-service">
         <div class="wrapper">
-          <h2 class="index-service__title title">Сервисы</h2>
-          <p class="index-service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, что бы сделать ваши покупки приятными.</p>
-          <ul class="index-service__list list">
-            <li class="index-service__item">
-              <label class="index-service__label index-service__label--active" for="tab-delivery" tabindex="0">Доставка</label>
-            </li>
-            <li class="index-service__item">
-              <label class="index-service__label" for="tab-guarantee" tabindex="0">Гарантия</label>
-            </li>
-            <li class="index-service__item">
-              <label class="index-service__label" for="tab-credit" tabindex="0">Кредит</label>
-            </li>
-          </ul>
-          <input id="tab-delivery" type="radio" name="service-tabs">
-          <input id="tab-guarantee" type="radio" name="service-tabs">
-          <input id="tab-credit" type="radio" name="service-tabs">
-          <ul class="index-service__list list">
-            <li class="index-service__item">
-              <h3 class="index-service__title title">Доставка</h3>
-              <p class="index-service__text">Мы с удовольствием доставим вам товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж</p>
-              <!--Декоративное изображение-->
-            </li>
-            <li class="index-service__item">
-              <h3 class="index-service__title title">Гарантия</h3>
-              <p class="index-service__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-              <!--Декоративное изображение-->
-            </li>
-            <li class="index-service__item">
-              <h3 class="index-service__title title">Кредит</h3>
-              <p class="index-service__text">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
-              <a class="index-service__link link button" href="">Отправить заявку</a>
-              <!--Декоративное изображение-->
-            </li>
-          </ul>
+          <div class="index-service__row">
+            <h2 class="index-service__title title">Сервисы</h2>
+            <p class="index-service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, что бы сделать ваши покупки приятными.</p>
+          </div>
+          <div class="index-service__row">
+            <ul class="index-service__tabs list">
+              <li class="index-service__tab">
+                <label class="index-service__label index-service__label--active" for="tab-delivery" tabindex="0">Доставка</label>
+              </li>
+              <li class="index-service__tab">
+                <label class="index-service__label" for="tab-guarantee" tabindex="0">Гарантия</label>
+              </li>
+              <li class="index-service__tab">
+                <label class="index-service__label" for="tab-credit" tabindex="0">Кредит</label>
+              </li>
+            </ul>
+            <input id="tab-delivery" type="radio" name="service-tabs">
+            <input id="tab-guarantee" type="radio" name="service-tabs">
+            <input id="tab-credit" type="radio" name="service-tabs">
+            <ul class="index-service__list list">
+              <li class="index-service__item">
+                <h3 class="index-service__title title">Доставка</h3>
+                <p class="index-service__text">Мы с удовольствием доставим вам товар прямо к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж</p>
+                <!--Декоративное изображение-->
+              </li>
+              <li class="index-service__item visually-hidden">
+                <h3 class="index-service__title title">Гарантия</h3>
+                <p class="index-service__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                <!--Декоративное изображение-->
+              </li>
+              <li class="index-service__item visually-hidden">
+                <h3 class="index-service__title title">Кредит</h3>
+                <p class="index-service__text">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
+                <a class="index-service__link link button" href="">Отправить заявку</a>
+                <!--Декоративное изображение-->
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

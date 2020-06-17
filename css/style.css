@@ -157,8 +157,7 @@ input[name="service-tabs"],
 }
 
 .wrapper {
-  width: 960px;
-  padding: 0 10px;
+  width: 940px;
   margin: 0 auto;
 }
 
@@ -243,7 +242,7 @@ input[name="service-tabs"],
   justify-content: space-between;
   flex-wrap: wrap;
 
-  max-width: 960px;
+  max-width: 940px;
 }
 
 .header-logo {
@@ -598,6 +597,18 @@ input[name="service-tabs"],
   background-color: var(--transparent-gray);
 }
 
+.slider__slide {
+  position: relative;
+}
+
+.slider__slide .slider__title {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  margin: 0;
+}
+
 .slider__title {
   font-weight: bold;
   font-size: 36px;
@@ -605,12 +616,32 @@ input[name="service-tabs"],
   text-transform: uppercase;
 
   color: var(--white);
-  background-color: black; /*временно*/
+}
+
+.slider__slide .slider__text {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+
+  margin: 0;
 }
 
 .slider__text {
   color: var(--white);
-  background-color: black; /*временно*/
+}
+
+.slider__link {
+  min-height: 38px;
+  min-width: 192px;
+  padding: 10px;
+
+  text-align: center;
+}
+
+.slider__slide .slider__link {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
 }
 
 /* Main index__product */
@@ -684,19 +715,73 @@ input[name="service-tabs"],
 /* Main index__service */
 
 .index-service {
+  padding: 60px 0;
+
   background-color: var(--basic-bg);
 }
 
-.index-service > .index-service__title {
+.index-service .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.index-service__row:first-child {
+  margin-bottom: 20px;
+}
+
+.index-service__row:first-child .index-service__title {
+  margin-bottom: 25px;
+}
+
+.index-service__row:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.index-service__row:first-child .index-service__title {
   color: var(--black);
 }
 
+.index-service__tabs {
+  max-width: 240px;
+}
+
+.index-service__list {
+  min-width: 619px;
+}
+
+.index-service .index-service__title {
+  margin: 0;
+}
+
+.index-service .index-service__text {
+  margin: 0;
+}
+
+.index-service__item .index-service__title {
+  margin-bottom: 30px;
+}
+
+.index-service__item .index-service__text {
+  max-width: 313px;
+}
+
 .index-service__text {
+  max-width: 400px;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 }
 
 .index-service__label {
+  display: block;
+  min-width: 240px;
+  min-height: 61px;
+  padding: 15px 20px;
+
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
@@ -704,6 +789,10 @@ input[name="service-tabs"],
   color: var(--white);
   background-color: var(--basic-blue);
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+}
+
+.index-service__tab .index-service__label {
+  margin-bottom: 1px;
 }
 
 .index-service__label:hover:not(.index-service__label--active),
@@ -750,7 +839,7 @@ input[name="service-tabs"],
 }
 
 .index-about .index-about__title {
-  margin-bottom: 18px;
+  margin: 0 0 18px 0;
 }
 
 .index-about__title {
@@ -766,11 +855,11 @@ input[name="service-tabs"],
   margin: 0;
 }
 
-.index-about .index-about__text:nth-of-type(1) {
+.index-about__column .index-about__text:nth-child(2) {
   margin-bottom: 25px;
 }
 
-.index-about__text:nth-of-type(2) {
+.index-about__text:nth-child(3) {
   max-width: 445px;
 }
 
@@ -790,7 +879,7 @@ input[name="service-tabs"],
   font-weight: 500;
 }
 
-.index-about__column:first-of-type .index-about__link {
+.index-about__column:nth-child(2) .index-about__link {
   margin-right: auto;
   padding: 11px 40px 9px 40px;
 }
@@ -900,7 +989,7 @@ input[name="service-tabs"],
   border-bottom: 1px solid var(--transparent-gray);
 }
 
-.catalog-filter .filter-fieldset:last-of-type {
+.catalog-filter fieldset:last-of-type {
   margin-bottom: 10px;
 
   border-bottom: none;
@@ -1072,7 +1161,7 @@ input[name="service-tabs"],
   justify-content: space-between;
   align-items: center;
 
-  min-width: 220px;
+  max-width: 220px;
   min-height: 318px;
   padding: 20px;
 
@@ -1303,7 +1392,7 @@ input[name="service-tabs"],
   flex-wrap: wrap;
 }
 
-.footer__top .footer__row:first-of-type {
+.footer__top .footer__row:nth-child(2) {
   margin-bottom: 22px;
 }
 
