@@ -269,8 +269,22 @@ input[name="service-tabs"],
 }
 
 .header__top .header-search {
+  position: relative;
+
   min-width: 270px;
   margin-right: auto;
+}
+
+.header-search__icon {
+  position: absolute;
+  top: 11px;
+  left: 18px;
+
+  width: 17px;
+  height: 17px;
+
+  opacity: 0.5;
+  background: url('../img/css-sprites.png') -151px -78px;
 }
 
 .header-search__form {
@@ -295,8 +309,24 @@ input[name="service-tabs"],
 }
 
 .header-users__link {
+  position: relative;
+
   min-width: 137px;
   padding: 9px 20px 10px 35px;
+}
+
+.header-users__link::before {
+  background-image: url("../img/css-sprites.png");
+}
+
+.header-users__link:first-child::before {
+  content: "";
+  position: absolute;
+
+  width: 14px;
+  height: 16px;
+
+  background-position: -160px -70px;
 }
 
 .header-users__link--checkout {
