@@ -111,10 +111,14 @@
               <div class="catalog-filter__toggle" aria-label="Диапазон цен">
                 <!--Будет тогл, позже-->
               </div>
-              <label class="visually-hidden" for="min-price">Минимальная цена</label>
-              <input class="catalog-filter__number" id="min-price" type="number" name="min-value" value="0" step="100">
-              <label class="visually-hidden" for="max-price">Максимальная цена</label>
-              <input class="catalog-filter__number" id="max-price" type="number" name="max-value" value="30000" step="100">
+              <div class="catalog-filter__num-box">
+                <label><span class="visually-hidden">Минимальная цена</span>
+                  <input class="catalog-filter__number" id="min-price" type="number" name="min-value" value="0" step="100">
+                </label>
+                <label><span class="visually-hidden">Максимальная цена</span>
+                  <input class="catalog-filter__number" id="max-price" type="number" name="max-value" value="30000" step="100">
+                </label>
+              </div>
             </fieldset>
 
             <fieldset class="catalog-filter__manufacturer filter-fieldset">

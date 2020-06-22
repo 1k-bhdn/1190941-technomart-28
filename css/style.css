@@ -35,6 +35,8 @@
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
+
+  --situational-gray: gray;
 }
 
 /* Fonts */
@@ -507,7 +509,6 @@ input[name="service-tabs"],
 /* Main index__offer */
 
 .index-offer__list {
-  grid-template-rows: 123px 123px 123px;
   grid-template-columns: 300px 300px 300px;
   grid-template-areas:
     "materials tools technique"
@@ -516,6 +517,10 @@ input[name="service-tabs"],
 
   display: grid;
   gap: 20px;
+}
+
+.index-offer__item {
+  min-height: 123px;
 }
 
 .index-offer__item:not(:nth-child(4)) {
@@ -598,15 +603,29 @@ input[name="service-tabs"],
 }
 
 .slider__slide {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 620px;
+  min-height: 266px;
+  padding-top: 23px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 27px;
 }
 
-.slider__slide .slider__title {
-  position: absolute;
-  top: 25px;
-  left: 25px;
+.slider__slide:first-child {
+  background: var(--situational-gray) url('../img/main-slide-1.jpg') no-repeat;
+}
 
-  margin: 0;
+.slider__slide:nth-child(2) {
+  background: var(--situational-gray) url('../img/main-slide-2.jpg') no-repeat;
+}
+
+.slider__content-top .slider__title {
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .slider__title {
@@ -618,16 +637,16 @@ input[name="service-tabs"],
   color: var(--white);
 }
 
-.slider__slide .slider__text {
-  position: absolute;
-  top: 65px;
-  left: 25px;
-
+.slider__content-top .slider__text {
   margin: 0;
 }
 
 .slider__text {
   color: var(--white);
+}
+
+.slider__slide .slider__link {
+  margin-right: auto;
 }
 
 .slider__link {
@@ -636,12 +655,6 @@ input[name="service-tabs"],
   padding: 10px;
 
   text-align: center;
-}
-
-.slider__slide .slider__link {
-  position: absolute;
-  bottom: 30px;
-  left: 25px;
 }
 
 /* Main index__product */
@@ -839,7 +852,8 @@ input[name="service-tabs"],
 }
 
 .index-about .index-about__title {
-  margin: 0 0 18px 0;
+  margin-bottom: 18px;
+  margin-top: 0;
 }
 
 .index-about__title {
@@ -1062,8 +1076,9 @@ input[name="service-tabs"],
   background-color: var(--basic-yellowlight);
 }
 
-.catalog-filter__price .catalog-filter__number:last-child {
-  float: right;
+.catalog-filter__num-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-filter__number {
