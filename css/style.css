@@ -5,7 +5,7 @@
   --deep-blue: #293449;
   --dark-green: #518534;
 
-  --basic-red: #ee3643;
+  --basic-red: #EE3643;
   --basic-green: #63a63e;
   --basic-blue: #32425c;
   --basic-yellowlight: #f7f3ec;
@@ -30,13 +30,15 @@
   --transparent-gray: rgba(169, 169, 169, 0.3);
 
   --del: #A9A9A9;
-  --logo-shadow: rgba(0, 0, 0, 0.24);
   --click: rgba(255, 255, 255, 0.5);
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
 
   --situational-gray: gray;
+
+  --logo-shadow: #b52933;
+  --logo-shadow-active: #8D1E26;
 }
 
 /* Fonts */
@@ -256,11 +258,12 @@ input[name="service-tabs"],
   padding: 11px 56px 7px 56px;
 
   background-color: var(--basic-red);
-  box-shadow: 0 5px 0 var(--error);
+  box-shadow: 0 5px 0 var(--logo-shadow);
 }
 
 .header-logo:active {
   background-color: var(--error);
+  box-shadow: 0 5px 0 var(--logo-shadow-active);
 }
 
 .header-logo__img {
@@ -268,29 +271,47 @@ input[name="service-tabs"],
   min-height: 18px;
 }
 
+/*header-search*/
+
 .header__top .header-search {
   position: relative;
 
   min-width: 270px;
+  max-height: 42px;
   margin-right: auto;
 }
 
-.header-search__icon {
+.header-search .header-search__label::before {
   position: absolute;
   top: 11px;
   left: 18px;
+}
+
+.header-search__label::before {
+  content: '';
 
   width: 17px;
   height: 17px;
 
   opacity: 0.5;
-  background: url('../img/css-sprites.png') -151px -78px;
+  filter: brightness(0%) invert(1);
+  background-image: url('../img/icon-search.svg');
+}
+
+.header-search__form:hover ~ .header-search__label::before {
+  opacity: 1;
+}
+
+.header-search__form:focus ~ .header-search__label::before {
+  opacity: 1;
+  filter: none;
 }
 
 .header-search__form {
   width: 100%;
-  padding: 11px 15px 11px 45px ;
+  padding: 11px 15px 11px 45px;
 
+  color: var(--white);
   background-color: transparent;
 }
 
@@ -311,43 +332,63 @@ input[name="service-tabs"],
 .header-users__link {
   position: relative;
 
+  text-align: center;
+
   min-width: 137px;
-  padding: 9px 20px 10px 35px;
+  padding: 9px 10px 10px 30px;
 }
 
 .header-users__link::before {
-  background-image: url("../img/css-sprites.png");
+  position: absolute;
+  top: 12px;
+  left: 13px;
+
+  opacity: 0.5;
+}
+
+.header-users__link:hover.header-users__link::before,
+.header-users__link:focus.header-users__link::before {
+  opacity: 1;
 }
 
 .header-users__link:first-child::before {
   content: "";
-  position: absolute;
 
   width: 14px;
   height: 16px;
 
-  background-position: -160px -70px;
+  background-image: url("../img/icon-bookmark.svg");
 }
 
-.header-users__link--checkout {
-  min-width: 154px;
-  padding-left: 20px;
+.header-users__link:nth-child(2)::before {
+  content: "";
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
 }
 
-.header-users__link:active:not(.header-users__link--checkout) {
+.header-users__link:active {
+  opacity: 0.5;
   background-color: var(--special-deepblue);
 }
 
-.header-users__link--checkout {
+.header-users__checkout {
+  min-width: 154px;
+  padding: 9px 10px 10px 10px;
+
+  text-align: center;
+
   background-color: var(--basic-green);
 }
 
-.header-users__link--checkout:hover,
-.header-users__link--checkout:focus {
+.header-users__checkout:hover,
+.header-users__checkout:focus {
   background-color: var(--success);
 }
 
-.header-users__link--checkout:active {
+.header-users__checkout:active {
   color: var(--click);
   background-color: var(--basic-green);
 }
@@ -385,6 +426,8 @@ input[name="service-tabs"],
 }
 
 .header-contacts {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -402,6 +445,21 @@ input[name="service-tabs"],
 
   border: 3px solid var(--white);
   color: var(--basic-red);
+}
+
+.header-contacts .header-contacts__tel::before {
+  position: absolute;
+  top: 15px;
+  left: 43px;
+}
+
+.header-contacts__tel::before {
+  content: "";
+
+  width: 18px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
 }
 
 .header-contacts .header-contacts__address {
@@ -422,8 +480,18 @@ input[name="service-tabs"],
   max-width: 304px;
 }
 
+.header-account .header-account__item {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.header-account .header-account__item:nth-child(odd) {
+  margin-right: 10px;
+}
+
 .header-account__link {
-  padding: 12px 27px 12px 45px;
+  padding: 12px 27px 12px 27px;
 
   font-size: 21px;
   font-weight: 500;
@@ -433,12 +501,36 @@ input[name="service-tabs"],
   background-color: var(--white);
 }
 
-.header-account .header-account__item {
-  margin-bottom: 10px;
+.header-account__item:first-child .header-account__link {
+  padding-left: 45px;
 }
 
-.header-account .header-account__item:nth-child(odd) {
-  margin-right: 10px;
+.header-account__item:first-child .header-account__link::before {
+  content: "";
+
+  width: 19px;
+  height: 17px;
+
+  opacity: 0.3;
+  filter: brightness(0%);
+  background-image: url("../img/icon-login.svg");
+}
+
+.header-account__item .header-account__link::before {
+  position: absolute;
+  top: 13px;
+  left: 19px;
+}
+
+.header-account__link:hover.header-account__link::before,
+.header-account__link:focus.header-account__link::before {
+  opacity: 1;
+  filter: none;
+}
+
+.header-account__link:active.header-account__link::before {
+  opacity: 0.3;
+  filter: brightness(0%);
 }
 
 .header-account__link:hover,
