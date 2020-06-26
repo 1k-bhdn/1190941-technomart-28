@@ -16,13 +16,13 @@
             <img class="header-logo__img" src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт">
           </a>
           <form class="header__search header-search" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="header-search__icon" for="site-search"><!--иконка--></label>
             <input class="header-search__form" id="site-search" type="search" name="site-search" placeholder="Поиск:">
+            <label class="header-search__label" for="site-search"></label>
           </form>
           <div class="header__users header-users">
-            <a class="header-users__link link" href=""><!--Иконка-->Закладки: 0</a>
-            <a class="header-users__link header-users__link--contain link" href=""><!--Иконка-->Корзина: 10</a>
-            <a class="header-users__link header-users__link--checkout link" href="">Оформить заказ</a>
+            <a class="header-users__link header-users__link--bookmarks link" href="">Закладки: 0</a>
+            <a class="header-users__link header-users__link--cart header-users__link--contain link" href="">Корзина: 10</a>
+            <a class="header-users__checkout link" href="">Оформить заказ</a>
           </div>
         </div>
       </div>
@@ -32,18 +32,17 @@
         <div class="header__middle">
           <p class="header__text">Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
           <div class="header__contacts header-contacts">
-            <a class="header-contacts__tel link" href="tel:+78125550555"><!--Иконка-->+7 (812) 555-05-55</a>
+            <a class="header-contacts__tel link" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="header__cabinet header-cabinet">
-            <p class="header-cabinet__text"><!--Иконка-->Равшан Джамшутович
-              <button class="header-cabinet__log-out visually-hidden" type="button"><!--Иконка--><!--Иконка-->Выход</button>
-            </p>
+            <a href="" class="header-cabinet__username">Равшан Джамшутович</a>
+            <button class="header-cabinet__log-out" type="button" aria-label="Выход"></button>
             <ul class="header-cabinet__list list">
               <li class="header-cabinet__item">
                 <a class="header-cabinet__link link" href="">Мои заказы</a>
               </li>
-              <li class="header-cabinet__item"><!--Сircle-->
+              <li class="header-cabinet__item">
                 <a class="header-cabinet__link link" href="">Личный кабинет</a>
               </li>
             </ul>
@@ -85,18 +84,18 @@
       <div class="wrapper">
         <ul class="catalog__breadcrumbs catalog-breadcrumbs list">
           <li class="catalog-breadcrumbs__item">
-            <a class="catalog-breadcrumbs__link" href="index.html"><!--Иконка-->
+            <a class="catalog-breadcrumbs__link catalog-breadcrumbs__link--main" href="index.html"><!--Иконка-->
               <span class="visually-hidden">Главная</span>
             </a>
           </li>
           <li class="catalog-breadcrumbs__item">
-            <a class="catalog-breadcrumbs__link" href=""><!--Иконка-->Каталог</a>
+            <a class="catalog-breadcrumbs__link" href="">Каталог</a>
           </li>
           <li class="catalog-breadcrumbs__item">
-            <a class="catalog-breadcrumbs__link" href=""><!--Иконка-->Инструменты</a>
+            <a class="catalog-breadcrumbs__link" href="">Инструменты</a>
           </li>
           <li class="catalog-breadcrumbs__item">
-            <a class="catalog-breadcrumbs__link" href=""><!--Иконка-->Перфораторы</a>
+            <span class="catalog-breadcrumbs__link">Перфораторы</span>
           </li>
         </ul>
 
@@ -226,7 +225,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card" tabindex="0">
+              <article class="catalog-grid__card card card--new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000" title="Перфоратор BOSCH BFG 6000">
                   <div class="card__purchase">
@@ -242,7 +241,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card" tabindex="0">
+              <article class="catalog-grid__card card card--new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000" title="Перфоратор BOSCH BFG 3000">
                   <div class="card__purchase">
@@ -274,7 +273,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card" tabindex="0">
+              <article class="catalog-grid__card card card--new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000" title="Перфоратор BOSCH BFG 2000">
                   <div class="card__purchase">
@@ -289,7 +288,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card" tabindex="0">
+              <article class="catalog-grid__card card card--new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000" title="Перфоратор BOSCH BFG 3000">
                   <div class="card__purchase">
@@ -321,7 +320,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card" tabindex="0">
+              <article class="catalog-grid__card card card--new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000" title="Перфоратор BOSCH BFG 2000">
                   <div class="card__purchase">
@@ -418,17 +417,17 @@
           <h2 class="visually-hidden">Следите за нашими новостями</h2>
           <p class="footer__text">© 2010–2019 Компания «Техномарт» Все права защищены</p>
           <ul class="footer__socials footer-socials list">
-            <li class="footer-socials__item">
+            <li class="footer-socials__item vk">
               <a class="footer-socials__link" href="https://vk.com/"><!--Иконка-->
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
-            <li class="footer-socials__item">
+            <li class="footer-socials__item fb">
               <a class="footer-socials__link" href="https://www.facebook.com/"><!--Иконка-->
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
-            <li class="footer-socials__item">
+            <li class="footer-socials__item insta">
               <a class="footer-socials__link" href="https://www.instagram.com/"><!--Иконка-->
                 <span class="visually-hidden">Инстаграм</span>
               </a>
@@ -447,11 +446,15 @@
 
     </footer>
 
-    <section class="visually-hidden">
-      <!--Иконка--><h2>Товар добавлен в корзину!</h2>
-      <a href="">Оформить заказ</a>
-      <a href="catalog.html">Продолжить покупки</a>
-      <button type="button">Закрыть</button>
+    <section class="modal modal__cart visually-hidden">
+      <div class="modal__row modal__row--top">
+        <!--Иконка--><h2 class="modal__title">Товар добавлен в корзину!</h2>
+      </div>
+      <div class="modal__row modal__row--bottom">
+        <a class="modal__link link button" href="">Оформить заказ</a>
+        <a class="modal__link modal__link--continue link button" href="catalog.html">Продолжить покупки</a>
+      </div>
+      <button class="modal__close" type="button" aria-label="Закрыть"></button>
     </section>
 
   </body>
