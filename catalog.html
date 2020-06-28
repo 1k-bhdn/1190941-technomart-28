@@ -84,7 +84,7 @@
       <div class="wrapper">
         <ul class="catalog__breadcrumbs catalog-breadcrumbs list">
           <li class="catalog-breadcrumbs__item">
-            <a class="catalog-breadcrumbs__link catalog-breadcrumbs__link--main" href="index.html"><!--Иконка-->
+            <a class="catalog-breadcrumbs__link catalog-breadcrumbs__link--main" href="index.html">
               <span class="visually-hidden">Главная</span>
             </a>
           </li>
@@ -107,8 +107,12 @@
 
             <fieldset class="catalog-filter__price filter-fieldset">
               <legend class="catalog-filter__title">Цена:</legend>
-              <div class="catalog-filter__toggle" aria-label="Диапазон цен">
-                <!--Будет тогл, позже-->
+              <div class="catalog-filter__range price-range" aria-label="Диапазон цен">
+                  <div class="price-range__scale">
+                    <div class="price-range__bar"></div>
+                  </div>
+                  <div class="price-range__toggle price-range__toggle--min" tabindex="0"></div>
+                  <div class="price-range__toggle price-range__toggle--max" tabindex="0"></div>
               </div>
               <div class="catalog-filter__num-box">
                 <label><span class="visually-hidden">Минимальная цена</span>
@@ -125,23 +129,33 @@
               <ul class="catalog-filter__list list">
                 <li class="catalog-filter__item">
                   <input class="catalog-filter__checkbox" id="manufacturer-bosch" type="checkbox" name="bosch" checked>
-                  <label class="catalog-filter__label" for="manufacturer-bosch">Bosch</label>
+                  <label class="catalog-filter__label" for="manufacturer-bosch">
+                    <span class="catalog-filter__check">Bosch</span>
+                  </label>
                 </li>
                 <li class="catalog-filter__item">
                   <input class="catalog-filter__checkbox" id="manufacturer-interskol" type="checkbox" name="interskol">
-                  <label class="catalog-filter__label" for="manufacturer-interskol">Интерскол</label>
+                  <label class="catalog-filter__label" for="manufacturer-interskol">
+                    <span class="catalog-filter__check">Интерскол</span>
+                  </label>
                 </li>
                 <li class="catalog-filter__item">
                   <input class="catalog-filter__checkbox" id="manufacturer-makita" type="checkbox" name="makita" checked>
-                  <label class="catalog-filter__label" for="manufacturer-makita">Makita</label>
+                  <label class="catalog-filter__label" for="manufacturer-makita">
+                    <span class="catalog-filter__check">Makita</span>
+                  </label>
                 </li>
                 <li class="catalog-filter__item">
                   <input class="catalog-filter__checkbox" id="manufacturer-dewalt" type="checkbox" name="dewalt">
-                  <label class="catalog-filter__label" for="manufacturer-dewalt">Dewalt</label>
+                  <label class="catalog-filter__label" for="manufacturer-dewalt">
+                    <span class="catalog-filter__check">Dewalt</span>
+                  </label>
                 </li>
                 <li class="catalog-filter__item">
                   <input class="catalog-filter__checkbox" id="manufacturer-hitachi" type="checkbox" name="hitachi">
-                  <label class="catalog-filter__label" for="manufacturer-hitachi">Hitachi</label>
+                  <label class="catalog-filter__label" for="manufacturer-hitachi">
+                    <span class="catalog-filter__check">Hitachi</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -177,14 +191,18 @@
               <a class="catalog-sort__link" href="">По функционалу</a>
             </li>
             <li class="catalog-sort__item">
-              <a class="catalog-sort__link" href=""><!--Иконка-->
-                <span class="visually-hidden">От дорогих к дешевым</span>
-              </a>
-            </li>
-            <li class="catalog-sort__item">
-              <a class="catalog-sort__link" href=""><!--Иконка-->
-                <span class="visually-hidden">От дешевых к дорогим</span>
-              </a>
+              <ul class="catalog-sort__price list">
+                <li class="catalog-sort__item">
+                  <a class="catalog-sort__link catalog-sort__link--up catalog-sort__link--active" href="">
+                    <span class="visually-hidden">От дорогих к дешевым</span>
+                  </a>
+                </li>
+                <li class="catalog-sort__item">
+                  <a class="catalog-sort__link catalog-sort__link--down" href="">
+                    <span class="visually-hidden">От дешевых к дорогим</span>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -225,7 +243,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card card--new" tabindex="0">
+              <article class="catalog-grid__card card label-new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000" title="Перфоратор BOSCH BFG 6000">
                   <div class="card__purchase">
@@ -241,7 +259,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card card--new" tabindex="0">
+              <article class="catalog-grid__card card label-new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000" title="Перфоратор BOSCH BFG 3000">
                   <div class="card__purchase">
@@ -273,7 +291,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card card--new" tabindex="0">
+              <article class="catalog-grid__card card label-new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000" title="Перфоратор BOSCH BFG 2000">
                   <div class="card__purchase">
@@ -288,7 +306,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card card--new" tabindex="0">
+              <article class="catalog-grid__card card label-new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000" title="Перфоратор BOSCH BFG 3000">
                   <div class="card__purchase">
@@ -320,7 +338,7 @@
               </article>
             </li>
             <li class="catalog-grid__item">
-              <article class="catalog-grid__card card card--new" tabindex="0">
+              <article class="catalog-grid__card card label-new" tabindex="0">
                 <div class="card__row">
                   <img class="card__img" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000" title="Перфоратор BOSCH BFG 2000">
                   <div class="card__purchase">
@@ -368,7 +386,7 @@
       <section class="footer__top">
         <h2 class="visually-hidden">Навигация</h2>
 
-        <div class="footer__row wrapper">
+        <div class="footer__row footer__row--top wrapper">
           <a class="footer__logo footer-logo" href="index.html">
             <img class="footer-logo__img" src="img/logo-technomart.svg" width="138" height="23" alt="Техномарт">
           </a>
@@ -391,7 +409,7 @@
           </ul>
         </div>
 
-        <div class="footer__row wrapper">
+        <div class="footer__row footer__row--bottom wrapper">
           <p class="footer__contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <a class="footer__tel link" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>
@@ -418,27 +436,27 @@
           <p class="footer__text">© 2010–2019 Компания «Техномарт» Все права защищены</p>
           <ul class="footer__socials footer-socials list">
             <li class="footer-socials__item vk">
-              <a class="footer-socials__link" href="https://vk.com/"><!--Иконка-->
+              <a class="footer-socials__link" href="https://vk.com/">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="footer-socials__item fb">
-              <a class="footer-socials__link" href="https://www.facebook.com/"><!--Иконка-->
+              <a class="footer-socials__link" href="https://www.facebook.com/">
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
             <li class="footer-socials__item insta">
-              <a class="footer-socials__link" href="https://www.instagram.com/"><!--Иконка-->
+              <a class="footer-socials__link" href="https://www.instagram.com/">
                 <span class="visually-hidden">Инстаграм</span>
               </a>
             </li>
           </ul>
           <div class="footer__text-container">
-            <p class="footer__text footer-text">Обратная связь:
-              <a class="footer-text__link footer-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <p class="footer__text footer__text--left">Обратная связь:
+              <a class="footer__link footer-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
-            <p class="footer__text footer-text">Разработано —
-              <a class="footer-text__link footer-link" href="https://htmlacademy.ru/">htmlacademy.ru</a>
+            <p class="footer__text">Разработано —
+              <a class="footer__link footer-link" href="https://htmlacademy.ru/">htmlacademy.ru</a>
             </p>
           </div>
         </div>
@@ -446,9 +464,9 @@
 
     </footer>
 
-    <section class="modal modal__cart visually-hidden">
+    <section class="modal__cart modal visually-hidden">
       <div class="modal__row modal__row--top">
-        <!--Иконка--><h2 class="modal__title">Товар добавлен в корзину!</h2>
+        <h2 class="modal__title">Товар добавлен в корзину!</h2>
       </div>
       <div class="modal__row modal__row--bottom">
         <a class="modal__link link button" href="">Оформить заказ</a>
