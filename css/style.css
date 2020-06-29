@@ -238,6 +238,7 @@ input[name="service-tabs"],
   bottom: 0;
   left: 0;
 
+  display: none;
   margin: auto;
 
   box-shadow:
@@ -245,6 +246,17 @@ input[name="service-tabs"],
     inset 0 7px 0 var(--basic-red);
 
   z-index: 2;
+}
+
+/* script mixes */
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 /* main grid */
@@ -889,7 +901,6 @@ input[name="service-tabs"],
   width: 200%;
 
   overflow: hidden;
-  transition: transform 0.8s ease;
 }
 
 .slider__slide {
@@ -1405,7 +1416,7 @@ input[name="service-tabs"],
   padding: 11px 40px 9px 40px;
 }
 
-.index-about__column:last-child .index-about__link {
+.index-about__link--trigger {
   padding: 11px 61px 9px 61px;
 }
 
@@ -2498,16 +2509,16 @@ input[name="service-tabs"],
   border: none;
 }
 
-/* modal__cart */
+/* modal--cart */
 
-.modal__cart {
+.modal--cart {
   width: 620px;
   height: 282px;
 
   background-color: var(--white)
 }
 
-.modal__cart::before {
+.modal--cart::before {
   content: "";
   position: absolute;
   top: 51px;
@@ -2520,12 +2531,12 @@ input[name="service-tabs"],
   background-color: var(--basic-green);
 }
 
-.modal__cart .modal__row {
+.modal--cart .modal__row {
   justify-content: center;
   align-items: center;
 }
 
-.modal__cart .modal__row--top {
+.modal--cart .modal__row--top {
   min-height: 170px;
 }
 
@@ -2593,4 +2604,46 @@ input[name="service-tabs"],
 
 .modal__link--continue:active {
   color: var(--basic-graylight);
+}
+
+/* modal animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
