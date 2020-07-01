@@ -471,7 +471,7 @@ input[name="service-tabs"],
 .header__middle .header__text {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 25px;
+  margin-left: 30px;
 }
 
 .header__text {
@@ -760,7 +760,7 @@ input[name="service-tabs"],
   gap: 60px;
   grid-template-rows: min-content min-content min-content min-content min-content;
 
-  padding-top: 60px;
+  padding-top: 57px;
 }
 
 /* main__index--offer */
@@ -1063,6 +1063,10 @@ input[name="service-tabs"],
 
 /* Main index__product */
 
+.index .index__product {
+  margin-bottom: 11px;
+}
+
 .index .index__row {
   margin-bottom: 20px;
 }
@@ -1097,6 +1101,10 @@ input[name="service-tabs"],
 
 /* Main index__manufacturer */
 
+.index .index__manufacturer {
+  margin-bottom: 11px;
+}
+
 .index-manufacturer__list {
   display: grid;
   gap: 20px;
@@ -1127,8 +1135,13 @@ input[name="service-tabs"],
 
 /* main__service */
 
+.index .index__service {
+  margin-bottom: 11px;
+}
+
 .index-service {
-  padding: 60px 0;
+  padding-top: 65px;
+  padding-bottom: 55px;
 
   background-color: var(--basic-bg);
 }
@@ -1314,7 +1327,7 @@ input[name="service-tabs"],
 }
 
 .index-about .index-about__title {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 
@@ -1332,11 +1345,12 @@ input[name="service-tabs"],
 }
 
 .index-about__column .index-about__text:nth-child(2) {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
-.index-about__text:nth-child(3) {
+.index-about__column .index-about__text:nth-child(3) {
   max-width: 445px;
+  margin-bottom: 4px;
 }
 
 .index-about__column:last-child .index-about__text {
@@ -1344,11 +1358,12 @@ input[name="service-tabs"],
 }
 
 .index-about .index-about__list {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .index-about__list .index-about__item {
   margin-left: 37px;
+  margin-bottom: 11px;
 }
 
 .index-about__item {
@@ -1420,7 +1435,7 @@ input[name="service-tabs"],
     "filter pagination pagination pagination";
 
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 57px;
 }
 
 /* Catalog breadcrumbs */
@@ -1520,7 +1535,7 @@ input[name="service-tabs"],
 }
 
 .catalog-filter fieldset:last-of-type {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   border-bottom: none;
 }
@@ -1564,7 +1579,7 @@ input[name="service-tabs"],
 }
 
 .catalog-filter__item .catalog-filter__label::before {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .catalog-filter__label::before {
@@ -1624,6 +1639,14 @@ input[name="service-tabs"],
 .catalog-filter__checkbox:checked ~ .catalog-filter__label .catalog-filter__check::before,
 .catalog-filter__checkbox:checked ~ .catalog-filter__label .catalog-filter__check::after {
   display: block;
+}
+
+.catalog-filter__power {
+  padding-top: 28px;
+}
+
+.catalog-filter__power .catalog-filter__title {
+  padding-top: 23px;
 }
 
 .catalog-filter__radio ~ .catalog-filter__label::before {
@@ -1754,6 +1777,10 @@ input[name="service-tabs"],
 
 /* Catalog sort */
 
+.catalog .catalog-sort {
+  margin-bottom: 6px;
+}
+
 .catalog-sort {
   grid-area: sort;
 
@@ -1796,7 +1823,7 @@ input[name="service-tabs"],
 .catalog-sort__link--active:hover,
 .catalog-sort__link--active:focus {
   color: var(--basic-red);
-  border: none;
+  border-bottom-color: transparent;
 }
 
 .catalog-sort__item {
@@ -2087,12 +2114,12 @@ input[name="service-tabs"],
 
 .catalog-about .wrapper {
   display: block;
-  padding-top: 64px;
-  padding-bottom: 68px;
+  padding-top: 65px;
+  padding-bottom: 71px;
 }
 
 .catalog-about .catalog-about__title {
-  margin: 0 0 25px 0;
+  margin: 0 0 23px 0;
 }
 
 .catalog-about__title {
@@ -2104,6 +2131,7 @@ input[name="service-tabs"],
 }
 
 .catalog-about__text {
+  max-width: 910px;
   font-size: 13px;
 }
 
@@ -2170,7 +2198,7 @@ input[name="service-tabs"],
 }
 
 .footer__row .footer-nav {
-  margin-top: 35px;
+  margin-top: 36px;
 }
 
 .footer-nav {
@@ -2192,7 +2220,7 @@ input[name="service-tabs"],
 }
 
 .footer__row .footer__category {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .footer__category {
