@@ -18,12 +18,12 @@
               <img class="header-logo__img" src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт">
           </a>
           <form class="header__search header-search" action="https://echo.htmlacademy.ru/" method="get">
-            <input class="header-search__form" id="site-search" type="search" name="site-search" placeholder="Поиск:">
-            <label class="header-search__label" for="site-search"></label>
+            <input class="header-search__input" id="site-search" type="search" name="site-search" placeholder="Поиск:">
+            <label class="header-search__icon" for="site-search"></label>
           </form>
           <div class="header__users header-users">
-            <a class="header-users__link header-users__link--bookmarks link " href="">Закладки: 0</a>
-            <a class="header-users__link header-users__link--cart link" href="">Корзина: 0</a>
+            <a class="header-users__bookmarks users-link link " href="">Закладки: 0</a>
+            <a class="header-users__cart users-link link" href="">Корзина: 0</a>
             <a class="header-users__checkout link" href="">Оформить заказ</a>
           </div>
         </div>
@@ -32,17 +32,17 @@
       <div class="wrapper">
 
         <div class="header__middle">
-          <p class="header__text">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
+          <p class="header__description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
           <div class="header__contacts header-contacts">
             <a class="header-contacts__tel link" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <ul class="header__account header-account list">
             <li class="header-account__item">
-              <a class="header-account__link header-account__link--login link" href="">Войти</a>
+              <a class="header-account__login account-link link" href="">Войти</a>
             </li>
             <li class="header-account__item">
-              <a class="header-account__link link" href="">Регистрация</a>
+              <a class="header-account__registration account-link link" href="">Регистрация</a>
             </li>
           </ul>
         </div>
@@ -83,210 +83,210 @@
       <section class="index__offer index-offer wrapper">
         <h2 class="visually-hidden">Предложения магазина</h2>
         <ul class="index-offer__list list">
-          <li class="index-offer__item index-offer__item--materials label-new">
-              <h3 class="index-offer__title">Материалы</h3>
-            <a class="index-offer__link link" href="">На любой вкус</a>
+          <li class="index-offer__materials offer-item label-new">
+            <h3 class="offer-item__title">Материалы</h3>
+            <a class="offer-item__link link" href="">На любой вкус</a>
           </li>
-          <li class="index-offer__item index-offer__item--tools">
-              <h3 class="index-offer__title">Инструмент</h3>
-              <a class="index-offer__link link" href="">На все случаи</a>
+          <li class="index-offer__tool offer-item">
+            <h3 class="offer-item__title">Инструмент</h3>
+            <a class="offer-item__link link" href="">На все случаи</a>
           </li>
-          <li class="index-offer__item index-offer__item--technique">
-              <h3 class="index-offer__title">Техника</h3>
-              <a class="index-offer__link link" href="">Для стройки</a>
+          <li class="index-offer__technique offer-item">
+            <h3 class="offer-item__title">Техника</h3>
+            <a class="offer-item__link link" href="">Для стройки</a>
           </li>
-          <li class="index-offer__item index-offer__item--slider">
-            <input class="slider-control" id="slider-control-1" type="radio" name="slider-controls" checked>
-            <input class="slider-control" id="slider-control-2" type="radio" name="slider-controls">
-            <div class="slider__controls">
-              <label class="slider__label" for="slider-control-1" aria-label="Дрели"></label>
-              <label class="slider__label" for="slider-control-2" aria-label="Перфораторы"></label>
+          <li class="index-offer__slider slider offer-item">
+            <input class="slider__control" id="slider__control-1" type="radio" name="slider-controls" checked>
+            <input class="slider__control" id="slider__control-2" type="radio" name="slider-controls">
+            <div class="slider__custom-controls">
+              <label class="slider__custom-control" for="slider__control-1" aria-label="Дрели"></label>
+              <label class="slider__custom-control" for="slider__control-2" aria-label="Перфораторы"></label>
             </div>
-            <ul class="slider list">
-              <li class="slider__slide slider__slide--drill">
-                <div class="slider__content-top">
-                  <h3 class="slider__title">Дрели</h3>
-                  <p class="slider__text">Соседям на радость!</p>
+            <ul class="slider__slides list">
+              <li class="slider__slide-drill slider-slide">
+                <div class="slider-slide__top">
+                  <h3 class="slider-slide__title">Дрели</h3>
+                  <p class="slider-slide__text">Соседям на радость!</p>
                 </div>
-                <a class="slider__link link button" href="catalog.html">Открыть каталог</a>
+                <a class="slider-slide__link link button" href="catalog.html">Открыть каталог</a>
               </li>
-              <li class="slider__slide slider__slide--hammer-drill">
-                <div class="slider__content-top">
-                  <h3 class="slider__title">Перфораторы</h3>
-                  <p class="slider__text">Настоящие мужские игрушки</p>
+              <li class="slider__slide-hammerdrill slider-slide">
+                <div class="slider-slide__top">
+                  <h3 class="slider-slide__title">Перфораторы</h3>
+                  <p class="slider-slide__text">Настоящие мужские игрушки</p>
                 </div>
-                <a class="slider__link link button" href="catalog.html">Открыть каталог</a>
+                <a class="slider-slide__link link button" href="catalog.html">Открыть каталог</a>
               </li>
             </ul>
-            <button class="slider__button slider__button--left" type="button" aria-label="Лево"></button>
-            <button class="slider__button slider__button--right" type="button" aria-label="Право"></button>
+            <button class="slider__button-left slider-button" type="button" aria-label="Лево"></button>
+            <button class="slider__button-right slider-button" type="button" aria-label="Право"></button>
           </li>
-          <li class="index-offer__item index-offer__item--sale">
-              <h3 class="index-offer__title">Скидки 50%</h3>
-              <a class="index-offer__link link" href="">На 350 товаров</a>
+          <li class="index-offer__sale offer-item">
+            <h3 class="offer-item__title">Скидки 50%</h3>
+            <a class="offer-item__link link" href="">На 350 товаров</a>
           </li>
-          <li class="index-offer__item index-offer__item--delivery">
-              <h3 class="index-offer__title">Доставка</h3>
-              <a class="index-offer__link link" href="">Бесплатно</a>
+          <li class="index-offer__delivery offer-item">
+            <h3 class="offer-item__title">Доставка</h3>
+            <a class="offer-item__link link" href="">Бесплатно</a>
           </li>
         </ul>
       </section>
 
-      <section class="index__product index-product wrapper">
-        <div class="index__row">
-          <h2 class="index-product__title title">Популярные товары:</h2>
-          <a class="index-product__button link button" href="">Все популярные товары</a>
+      <section class="index__products index-products wrapper">
+        <div class="headers-row">
+          <h2 class="index-products__title title">Популярные товары:</h2>
+          <a class="index-products__button link button" href="">Все популярные товары</a>
         </div>
-        <ul class="index-product__list list">
-          <li class="index-product__item">
-              <article class="index-product__card card" tabindex="0">
-                <div class="card__row">
-                  <img class="card__img" src="img/bosch-bfg-9000.jpg" width="184" height="164" alt="Изображение перфоратора BOSCH BFG 9000" title="Купить перфоратор BOSCH BFG 9000">
-                  <div class="card__purchase">
-                    <a class="card__buy link button" href="">Купить</a>
-                    <a class="card__to-bookmarks link button" href="">В закладки</a>
-                  </div>
+        <ul class="index-products__list list">
+          <li class="index-products__item">
+            <article class="index-products__card card" tabindex="0">
+              <div class="card__row">
+                <img class="card__img" src="img/bosch-bfg-9000.jpg" width="184" height="164" alt="Изображение перфоратора BOSCH BFG 9000" title="Купить перфоратор BOSCH BFG 9000">
+                <div class="card__choice">
+                  <a class="card__buy link button" href="">Купить</a>
+                  <a class="card__to-bookmarks link button" href="">В закладки</a>
                 </div>
-                <div class="card__row">
-                  <h3 class="card__title">Перфоратор BOSCH BFG 9000</h3>
-                  <del class="card__full-price card-price">32500 р.</del>
-                  <span class="card__final-price card-price">25500 р.</span>
-                </div>
-              </article>
+              </div>
+              <div class="card__row">
+                <h3 class="card__title">Перфоратор BOSCH BFG 9000</h3>
+                <del class="card__full-price card-price">32500 р.</del>
+                <span class="card__final-price card-price">25500 р.</span>
+              </div>
+            </article>
           </li>
-          <li class="index-product__item">
-              <article class="index-product__card card label-new" tabindex="0">
-                <div class="card__row">
-                  <img class="card__img" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000" title="Купить перфоратор BOSCH BFG 3000">
-                  <div class="card__purchase">
-                    <a class="card__buy link button" href="">Купить</a>
-                    <a class="card__to-bookmarks link button" href="">В закладки</a>
-                  </div>
+          <li class="index-products__item">
+            <article class="index-products__card card label-new" tabindex="0">
+              <div class="card__row">
+                <img class="card__img" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000" title="Купить перфоратор BOSCH BFG 3000">
+                <div class="card__choice">
+                  <a class="card__buy link button" href="">Купить</a>
+                  <a class="card__to-bookmarks link button" href="">В закладки</a>
                 </div>
-                <div class="card__row">
-                  <h3 class="card__title">Перфоратор BOSCH BFG 3000</h3>
-                  <del class="card__full-price card-price">22500 р.</del>
-                  <span class="card__final-price card-price">15500 р.</span>
-                </div>
-              </article>
+              </div>
+              <div class="card__row">
+                <h3 class="card__title">Перфоратор BOSCH BFG 3000</h3>
+                <del class="card__full-price card-price">22500 р.</del>
+                <span class="card__final-price card-price">15500 р.</span>
+              </div>
+            </article>
           </li>
-          <li class="index-product__item">
-              <article class="index-product__card card" tabindex="0">
-                <div class="card__row">
-                  <img class="card__img" src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000" title="Купить перфоратор BOSCH BFG 6000">
-                  <div class="card__purchase">
-                    <a class="card__buy link button" href="">Купить</a>
-                    <a class="card__to-bookmarks link button" href="">В закладки</a>
-                  </div>
+          <li class="index-products__item">
+            <article class="index-products__card card" tabindex="0">
+              <div class="card__row">
+                <img class="card__img" src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000" title="Купить перфоратор BOSCH BFG 6000">
+                <div class="card__choice">
+                  <a class="card__buy link button" href="">Купить</a>
+                  <a class="card__to-bookmarks link button" href="">В закладки</a>
                 </div>
-                <div class="card__row">
-                  <h3 class="card__title">Перфоратор BOSCH BFG 6000</h3>
-                  <del class="card__full-price card-price">30500 р.</del>
-                  <span class="card__final-price card-price">25500 р.</span>
-                </div>
-              </article>
+              </div>
+              <div class="card__row">
+                <h3 class="card__title">Перфоратор BOSCH BFG 6000</h3>
+                <del class="card__full-price card-price">30500 р.</del>
+                <span class="card__final-price card-price">25500 р.</span>
+              </div>
+            </article>
           </li>
-          <li class="index-product__item">
-              <article class="index-product__card card label-new" tabindex="0">
-                <div class="card__row">
-                  <img class="card__img" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000" title="Купить перфоратор BOSCH BFG 2000">
-                  <div class="card__purchase">
-                    <a class="card__buy link button" href="">Купить</a>
-                    <a class="card__to-bookmarks link button" href="">В закладки</a>
-                  </div>
+          <li class="index-products__item">
+            <article class="index-products__card card label-new" tabindex="0">
+              <div class="card__row">
+                <img class="card__img" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000" title="Купить перфоратор BOSCH BFG 2000">
+                <div class="card__choice">
+                  <a class="card__buy link button" href="">Купить</a>
+                  <a class="card__to-bookmarks link button" href="">В закладки</a>
                 </div>
-                <div class="card__row">
-                  <h3 class="card__title">Перфоратор BOSCH BFG 2000</h3>
-                  <span class="card__final-price card-price">12500 р.</span>
-                </div>
-              </article>
+              </div>
+              <div class="card__row">
+                <h3 class="card__title">Перфоратор BOSCH BFG 2000</h3>
+                <span class="card__final-price card-price">12500 р.</span>
+              </div>
+            </article>
           </li>
         </ul>
       </section>
 
-      <section class="index__manufacturer index-manufacturer wrapper">
-        <div class="index__row">
-          <h2 class="index-manufacturer__title title">Популярные производители:</h2>
-          <a class="index-manufacturer__button link button" href="">Все производители</a>
+      <section class="index__manufacturers index-manufacturers wrapper">
+        <div class="headers-row">
+          <h2 class="index-manufacturers__title title">Популярные производители:</h2>
+          <a class="index-manufacturers__button link button" href="">Все производители</a>
         </div>
-        <ul class="index-manufacturer__list list">
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-bosch.png" width="126" height="37" alt="Логотип производителя «BOSCH»" title="Каталог продукции производителя «BOSCH»">
+        <ul class="index-manufacturers__list list">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-bosch.png" width="126" height="37" alt="Логотип производителя «BOSCH»" title="Каталог продукции производителя «BOSCH»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-makita.png" width="123" height="40" alt="Логотип производителя «Makita»" title="Каталог продукции производителя «Makita»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-makita.png" width="123" height="40" alt="Логотип производителя «Makita»" title="Каталог продукции производителя «Makita»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-dewalt.png" width="146" height="44" alt="Логотип производителя «DeWALT»" title="Каталог продукции производителя «DeWALT»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-dewalt.png" width="146" height="44" alt="Логотип производителя «DeWALT»" title="Каталог продукции производителя «DeWALT»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-interskol.png" width="200" height="74" alt="Логотип производителя «Интерскол»" title="Каталог продукции производителя «Интерскол»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-interskol.png" width="200" height="74" alt="Логотип производителя «Интерскол»" title="Каталог продукции производителя «Интерскол»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-hitachi.png" width="169" height="31" alt="Логотип производителя «HITACHI»" title="Каталог продукции производителя «HITACHI»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-hitachi.png" width="169" height="31" alt="Логотип производителя «HITACHI»" title="Каталог продукции производителя «HITACHI»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-lg.png" width="121" height="73" alt="Логотип производителя «LG»" title="Каталог продукции производителя «LG»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-lg.png" width="121" height="73" alt="Логотип производителя «LG»" title="Каталог продукции производителя «LG»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-aeg.png" width="151" height="96" alt="Логотип производителя «AEG»" title="Каталог продукции производителя «AEG»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-aeg.png" width="151" height="96" alt="Логотип производителя «AEG»" title="Каталог продукции производителя «AEG»">
             </a>
           </li>
-          <li class="index-manufacturer__item">
-            <a class="index-manufacturer__link" href="">
-                <img class="index-manufacturer__img" src="img/manufacturer-metabo.png" width="204" height="69" alt="Логотип производителя «metabo»" title="Каталог продукции производителя «metabo»">
+          <li class="index-manufacturers__item">
+            <a class="index-manufacturers__link" href="">
+                <img class="index-manufacturers__img" src="img/manufacturer-metabo.png" width="204" height="69" alt="Логотип производителя «metabo»" title="Каталог продукции производителя «metabo»">
             </a>
           </li>
         </ul>
       </section>
 
-      <section class="index__service index-service">
+      <section class="index__services index-services">
         <div class="wrapper">
-          <div class="index-service__top">
-            <h2 class="index-service__title title">Сервисы</h2>
-            <p class="index-service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, что бы сделать ваши покупки приятными.</p>
+          <div class="index-services__top">
+            <h2 class="services-item__title title">Сервисы</h2>
+            <p class="index-services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, что бы сделать ваши покупки приятными.</p>
           </div>
-          <div class="index-service__bottom">
-            <input class="index-service__radio" id="tab-delivery" type="radio" name="service-tabs" checked>
-            <input class="index-service__radio" id="tab-guarantee" type="radio" name="service-tabs">
-            <input class="index-service__radio" id="tab-credit" type="radio" name="service-tabs">
-            <ul class="index-service__tabs list">
-              <li class="index-service__tab">
-                <label class="index-service__label" for="tab-delivery" tabindex="0">Доставка</label>
+          <div class="index-services__bottom">
+            <input class="index-services__radio" id="tab-delivery" type="radio" name="service-tabs" checked>
+            <input class="index-services__radio" id="tab-guarantee" type="radio" name="service-tabs">
+            <input class="index-services__radio" id="tab-credit" type="radio" name="service-tabs">
+            <ul class="index-services__tabs list">
+              <li class="index-services__tab">
+                <label class="index-services__label" for="tab-delivery" tabindex="0">Доставка</label>
               </li>
-              <li class="index-service__tab">
-                <label class="index-service__label" for="tab-guarantee" tabindex="0">Гарантия</label>
+              <li class="index-services__tab">
+                <label class="index-services__label" for="tab-guarantee" tabindex="0">Гарантия</label>
               </li>
-              <li class="index-service__tab">
-                <label class="index-service__label" for="tab-credit" tabindex="0">Кредит</label>
+              <li class="index-services__tab">
+                <label class="index-services__label" for="tab-credit" tabindex="0">Кредит</label>
               </li>
             </ul>
-            <ul class="index-service__list list">
-              <li class="index-service__item index-service__item--delivery">
-                <h3 class="index-service__title title">Доставка</h3>
-                <p class="index-service__text">Мы с удовольствием доставим вам товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж</p>
+            <ul class="index-services__list list">
+              <li class="index-services__delivery services-item">
+                <h3 class="services-item__title title">Доставка</h3>
+                <p class="index-services__text">Мы с удовольствием доставим вам товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж</p>
               </li>
-              <li class="index-service__item index-service__item--guarantee">
-                <h3 class="index-service__title title">Гарантия</h3>
-                <p class="index-service__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+              <li class="index-services__guarantee services-item">
+                <h3 class="services-item__title title">Гарантия</h3>
+                <p class="index-services__text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
               </li>
-              <li class="index-service__item index-service__item--credit">
-                <h3 class="index-service__title title">Кредит</h3>
-                <p class="index-service__text">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
-                <a class="index-service__link link button" href="">Отправить заявку</a>
+              <li class="index-services__credit services-item">
+                <h3 class="services-item__title title">Кредит</h3>
+                <p class="index-services__text">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
+                <a class="services-item__link link button" href="">Отправить заявку</a>
               </li>
             </ul>
           </div>
@@ -297,8 +297,8 @@
         <h2 class="visually-hidden">О нас</h2>
         <div class="index-about__column">
           <h3 class="index-about__title title">Компания «Техномарт»</h3>
-          <p class="index-about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p class="index-about__text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+          <p class="index-about__offer about-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p class="index-about__delivery about-text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
           <ul class="index-about__list list">
             <li class="index-about__item">Деловые линии</li>
             <li class="index-about__item">Автотрейдинг</li>
@@ -308,7 +308,7 @@
         </div>
         <div class="index-about__column">
           <h3 class="index-about__title title">Контакты</h3>
-          <p class="index-about__text">Вы можете забрать товар сами, заехав в наш офис:</p>
+          <p class="index-about__location about-text">Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="index-about__map-link" href="">
             <img class="index-about__map" src="img/map.jpg" width="300" height="158" alt="Расположение магазина «Техномарт» на карте" title="Интерактивная карта">
           </a>
