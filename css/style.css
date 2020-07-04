@@ -1828,9 +1828,7 @@ input[name="service-tabs"],
   margin: 0;
 }
 
-.catalog-filter__number {
-  -moz-appearance: textfield;
-}
+.catalog-filter__number,
 .catalog-filter__number:hover,
 .catalog-filter__number:focus {
   -moz-appearance: textfield;
